@@ -23,8 +23,10 @@ namespace VS_Studio_Students
                     subjects.Add(apprentice.subject);
                 }
             }
+
             return subjects;
         }
+
         public List<Student> GetAllBySubject(Guid id)
         {
             List<Student> students = new List<Student>();
@@ -35,6 +37,7 @@ namespace VS_Studio_Students
                     students.Add(apprentice.student);
                 }
             }
+
             return students;
         }
 
@@ -47,7 +50,9 @@ namespace VS_Studio_Students
                     return apprentice;
                 }
             }
-            Console.WriteLine("Это преподаватель не преподает этот предмет, чтобы получить List всех его предметов воспользуйтесь методом GetByTeacher");
+
+            Console.WriteLine(
+                "Это преподаватель не преподает этот предмет, чтобы получить List всех его предметов воспользуйтесь методом GetByTeacher");
             return null;
         }
 
@@ -71,3 +76,4 @@ namespace VS_Studio_Students
             apprentices.Remove(apprentice);
         }
     }
+}
